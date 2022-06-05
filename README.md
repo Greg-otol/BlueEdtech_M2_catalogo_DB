@@ -1,13 +1,13 @@
 # Catálogo
 
-Catálogo - Projeto 3 do módulo 2 BlueEdtech
+Catálogo - Projeto 4 do módulo 2 BlueEdtech
 
 
 Para a correta execução do projeto em IDE, é necessário a instalação das dependências localizadas no arquivo "package.json". 
 
 É possível a visualização do projeto através do Heroku onde foi feito o Deploy no link abaixo:
 
-https://catalogo-greg.herokuapp.com/
+https://catalogodb-greg.herokuapp.com/
 
 O projeto foi desenvolvido com as tecnologias:
 
@@ -21,7 +21,7 @@ Express
 
 Nodemon
 
-No Projeto Catálogo, foi implantado o CRUD em memória local, onde podemos visualizar, cadastrar atualizar e apagar os itens do catálogo.
+No Projeto Catálogo, foi implantado o CRUD com uso do Postgres para persistir os dados, onde podemos visualizar, cadastrar atualizar e apagar os itens do catálogo.
 Também foi complementado com caixas de mensagem automática informando o status das operações realizadas.
 
 
