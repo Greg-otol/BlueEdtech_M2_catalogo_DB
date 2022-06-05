@@ -121,7 +121,7 @@ p#desc {
 
 .card h2 {
   text-align: center;
-  font-size: min(1.1rem, 3vw);
+  font-size: min(1.1rem, 5vw);
   padding-bottom: 1rem;
 }
 
