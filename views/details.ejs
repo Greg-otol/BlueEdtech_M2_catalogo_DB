@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Detalhes do Livro</title>
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
+    <main id="details">
+      <div class="container-details">
+        <div class="img-button">
+          <img id="img_details" src="<%= book.image %>" alt="Imagen do Livro <%=book.name %> " />
+          <div class="button">
+            <a id="edit" href="/update/<%= book.id %> ">Editar</a>
+            <a id="delete">Apagar</a>
+          </div>
+        </div>
+        <div class="book">
+          <div class="dados">
+            <h3 id="id-details">Nº: <%= book.id %>
+            </h3>
+            <p id="book">Livro</p>
+            <h3>
+              <%= book.name %>
+            </h3>
+            <p id="author">Autor</p>
+            <p>
+              <%= book.author %>
+            </p>
+            <p id="synopsis">Sinopse</p>
+            <p id="description">
+              <%= book.synopsis %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./partials/modal.ejs") %>
+      <%- include("./partials/footer.ejs") %>
+        <script src="/js/modal.js"></script>
+</body>
+
+</html>
