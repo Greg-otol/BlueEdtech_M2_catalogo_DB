@@ -178,7 +178,7 @@ section#form button {
   display: flex;
   padding: 0.8rem 1.5rem;
   margin: 0 auto;
-  border: 0.05rem solid white;
+  border: none;
   transition: all 0.5s ease-out;
   cursor: pointer;
   background-color: rgb(31, 30, 28);
@@ -261,7 +261,7 @@ a#delete {
 .button a {
   display: flex;
   margin: 0 auto;
-  border: 0.05rem solid white;
+  border: none;
   transition: all 0.5s ease-out;
   cursor: pointer;
   background-color: rgb(31, 30, 28);
@@ -344,10 +344,6 @@ footer img {
   .container-details {
     flex-direction: column;
   }
-  /* .button {
-    justify-content: center;
-    align-items: center;
-  } */
   nav {
     display: none;
   }
@@ -472,7 +468,7 @@ p#text {
   min-width: 240px;
   padding: 40px;
   position: relative;
-  border: 0.05rem solid white;
+  border: none;
 }
 
 .yesNo {
@@ -485,7 +481,7 @@ p#text {
 .yesNo a {
   padding: 0.3rem 1.2rem 0.3rem 1.2rem;
   display: flex;
-  border: 0.05rem solid white;
+  border: none;
   transition: all 0.5s ease-out;
   cursor: pointer;
   background-color: rgb(31, 30, 28);
@@ -526,7 +522,7 @@ p#text {
   right: -10px;
   width: 40px;
   height: 40px;
-  border: 2px solid white;
+  border: 2px solid rgb(31, 30, 28);
   background: rgb(31, 30, 28);
   color: white;
   font-family: "PT Mono", monospace;
