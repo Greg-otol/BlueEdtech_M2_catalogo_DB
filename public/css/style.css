@@ -436,23 +436,6 @@ p#text {
   color: white;
   text-shadow: 0.1rem 0.1rem #434343;
 }
-/* messageLogin */
-.messageLogin {
-  padding: 0.5rem;
-  background: linear-gradient(90deg, #232323 0%, #353535 100%);
-  z-index: 100;
-  width: 100%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-p#textLogin {
-  font-size: min(1.1rem, 3vw);
-  font-weight: 600;
-  color: white;
-  text-shadow: 0.1rem 0.1rem #434343;
-}
-
 /* Modal */
 .modal-container {
   width: 100vw;
@@ -549,51 +532,4 @@ p#textLogin {
 
 .close:hover {
   background: rgb(238, 64, 64);
-}
-/* Tela de Login */
-.login {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.boxLogin form {
-  width: 15rem;
-  height: 20rem;
-  background: rgba(61, 55, 55, 0.801);
-  box-shadow: 5px 5px 5px 5px #00000035;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-shadow: 0.1rem 0.1rem rgb(31, 30, 28);
-  color: white;
-}
-
-input#user,
-input#pass {
-  padding: 0.6rem;
-  border: none;
-  outline: none;
-}
-
-a#btn {
-  display: flex;
-  padding: 0.6rem 1.5rem;
-  margin: 0 auto;
-  border: none;
-  transition: all 0.5s ease-out;
-  cursor: pointer;
-  background-color: rgb(31, 30, 28);
-  color: white;
-  font-size: 1rem;
-  transition: all 250ms linear 0s;
-  text-decoration: none;
-}
-
-a#btn:hover {
-  background: rgba(117, 107, 107, 0.466);
 }
