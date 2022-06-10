@@ -66,7 +66,7 @@ header {
   }
   
   header nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
   }
 /* Space */
 .space {
@@ -97,13 +97,13 @@ main {
   transition: all 0.5s ease-out;
   box-shadow: 5px 5px 5px 5px #00000035;
   padding: 1rem;
-  background-color: rgba(61, 55, 55, 0.801);
+  background: linear-gradient(90deg, #232323 0%, #353535 100%);
   text-shadow: 0.1rem 0.1rem #434343;
   color: white;
 }
 
 .card:hover {
-  background: rgba(51, 37, 37, 0.425);
+  background: linear-gradient(90deg, #282828 0%, #454545 100%);
 }
 
 .card img {
@@ -136,7 +136,7 @@ main#register {
 }
 
 .container {
-  background-color: rgba(61, 55, 55, 0.801);
+  background: linear-gradient(90deg, #232323 0%, #353535 100%);
   display: flex;
   justify-content: center;
   margin: 1rem;
@@ -181,14 +181,14 @@ section#form button {
   border: none;
   transition: all 0.5s ease-out;
   cursor: pointer;
-  background-color: rgb(31, 30, 28);
+  background: linear-gradient(90deg, rgb(26,25,23) 0%, rgb(36, 35, 33) 100%);
   color: white;
   font-size: 1rem;
   transition: all 250ms linear 0s;
 }
 
 section#form button:hover {
-  background: rgba(117, 107, 107, 0.466);
+  background: linear-gradient(90deg, rgb(31,30,28) 0%, rgb(41, 40, 38) 100%);
 }
 /* Details */
 main#details {
@@ -200,7 +200,7 @@ main#details {
   justify-content: center;
   flex-direction: row;
   width: 100%;
-  background-color: rgba(61, 55, 55, 0.801);
+  background: linear-gradient(90deg, #232323 0%, #353535 100%);
   box-shadow: 5px 5px 5px 5px #00000035;
 }
 
@@ -264,14 +264,14 @@ a#delete {
   border: none;
   transition: all 0.5s ease-out;
   cursor: pointer;
-  background-color: rgb(31, 30, 28);
+  background: linear-gradient(90deg, rgb(26,25,23) 0%, rgb(36, 35, 33) 100%);
   color: white;
   font-size: 1rem;
   transition: all 250ms linear 0s;
 }
 
 .button a:hover {
-  background: rgba(117, 107, 107, 0.466);
+  background: linear-gradient(90deg, rgb(31,30,28) 0%, rgb(41, 40, 38) 100%);
 }
 
 h3#id-details {
@@ -294,7 +294,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(61, 55, 55, 0.801);
+  background: linear-gradient(0deg, #232323 35%, #353535 80%);
   padding: 1rem;
   margin: 0;
   margin-top: auto;
@@ -379,7 +379,7 @@ footer img {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(61, 55, 55, 0.932);
+    background: linear-gradient(90deg, #232323 0%, #353535 100%);
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -423,7 +423,7 @@ footer img {
 /* Message */
 .message {
   padding: 0.5rem;
-  background-color: rgba(51, 37, 37, 0.425);
+  background: linear-gradient(90deg, #232323 0%, #353535 100%);
   z-index: 100;
   width: 100%;
   display: flex;
@@ -436,6 +436,23 @@ p#text {
   color: white;
   text-shadow: 0.1rem 0.1rem #434343;
 }
+/* messageLogin */
+.messageLogin {
+  padding: 0.5rem;
+  background: linear-gradient(90deg, #232323 0%, #353535 100%);
+  z-index: 100;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+p#textLogin {
+  font-size: min(1.1rem, 3vw);
+  font-weight: 600;
+  color: white;
+  text-shadow: 0.1rem 0.1rem #434343;
+}
+
 /* Modal */
 .modal-container {
   width: 100vw;
@@ -459,7 +476,7 @@ p#text {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(61, 55, 55);
+  background: linear-gradient(90deg, #232323 0%, #353535 100%);
   box-shadow: 5px 5px 5px 5px #00000035;
   text-shadow: 0.1rem 0.1rem #434343;
   color: white;
@@ -484,7 +501,7 @@ p#text {
   border: none;
   transition: all 0.5s ease-out;
   cursor: pointer;
-  background-color: rgb(31, 30, 28);
+  background: linear-gradient(90deg, rgb(26,25,23) 0%, rgb(36, 35, 33) 100%);
   color: white;
   font-size: 1rem;
   transition: all 250ms linear 0s;
@@ -492,7 +509,7 @@ p#text {
 }
 
 .yesNo a:hover {
-  background: rgba(117, 107, 107, 0.466);
+  background: linear-gradient(90deg, rgb(31,30,28) 0%, rgb(41, 40, 38) 100%);
 }
 
 .modal h2 {
@@ -532,4 +549,51 @@ p#text {
 
 .close:hover {
   background: rgb(238, 64, 64);
+}
+/* Tela de Login */
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxLogin form {
+  width: 15rem;
+  height: 20rem;
+  background: rgba(61, 55, 55, 0.801);
+  box-shadow: 5px 5px 5px 5px #00000035;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-shadow: 0.1rem 0.1rem rgb(31, 30, 28);
+  color: white;
+}
+
+input#user,
+input#pass {
+  padding: 0.6rem;
+  border: none;
+  outline: none;
+}
+
+a#btn {
+  display: flex;
+  padding: 0.6rem 1.5rem;
+  margin: 0 auto;
+  border: none;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  background-color: rgb(31, 30, 28);
+  color: white;
+  font-size: 1rem;
+  transition: all 250ms linear 0s;
+  text-decoration: none;
+}
+
+a#btn:hover {
+  background: rgba(117, 107, 107, 0.466);
 }

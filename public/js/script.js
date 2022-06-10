@@ -1,5 +1,4 @@
 let imported = document.createElement('script');
-imported.src = 'showModal.js';
 document.head.appendChild(imported);
 
 let show = true;
