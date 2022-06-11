@@ -11,7 +11,8 @@
     <div class="modal">
         <button class="close">x</button>
         <h2 id="msgText">Tem certeza que deseja remover o livro:</h2>
-        <h2><%= book.name %>?</h2>
+        <h2><%= book.name %></h2>
+        <img id="img_modal" src="<%= book.image %>" alt="Imagen do Livro <%=book.name %> " />
         <div class="yesNo">
           <a id="yes" href="/delete/<%= book.id %>">Sim</a>
           <a id="no">Não</a>

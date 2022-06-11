@@ -471,6 +471,10 @@ p#text {
   border: none;
 }
 
+img#img_modal {
+  width: 6rem;
+}
+
 .yesNo {
   display: flex;
   justify-content: center;
@@ -496,6 +500,7 @@ p#text {
 }
 
 .modal h2 {
+  font-size: min(1.5rem, 5vw);
   text-align: center;
   padding-bottom: 1rem;
 }
