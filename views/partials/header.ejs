@@ -10,28 +10,23 @@
 </head>
 
 <body>
-  <header>
-    <div class="container_header">
-      <img src="/img/logo.png" alt="OtOl Developer" />
-      <div class="menu-section">
-        <div class="menu-toggle">
-          <div class="one"></div>
-          <div class="two"></div>
-          <div class="three"></div>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Livros</a>
-            </li>
-            <p id="space">|</p>
-            <li>
-              <a href="/register">Cadastrar</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+  <header id="header">
+    <img id="logo" src="/img/logo.png" alt="OtOl Developer" />
+    <nav id="nav">
+      <button
+        aria-label="Abrir Menu"
+        id="btn-mobile"
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li><a href="/books">Livros</a></li>
+        <li><a href="/register">Cadastrar</a></li>
+      </ul>
+    </nav>
   </header>
   <div class="space"></div>
   <script src="/js/script.js"></script>

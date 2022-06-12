@@ -15,8 +15,22 @@ html {
   padding: 0;
 }
 /* Menu */
-header {
-  display: flex;
+a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#logo {
+  width: 6rem;
+  margin-left: -0.5rem;
+}
+
+#header {
   background-image: url("/img/topo.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -24,50 +38,92 @@ header {
   z-index: 9999;
   width: 100%;
   height: 6rem;
-  padding: 0.5rem;
   align-items: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.container_header {
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 6rem;
+    right: 0px;
+    background: linear-gradient(0deg, #353535 35%, #232323 75%);
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 6rem);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.02);
+  }
+  #btn-mobile {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1180px;
-    margin: auto;
-  }
-
-  p#space {
+    padding: 0.5rem 0;
     font-size: 1rem;
+    border: none;
+    background: none;
     color: white;
+    cursor: pointer;
+    gap: 0.5rem;
   }
-  
-  header img {
-    width: 6%;
-    margin-left: 0;
+  #hamburger {
+    border-top: 3px solid;
+    width: 30px;
   }
-  
-  header nav ul {
-    display: flex;
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
   }
-  
-  header nav ul li {
-    list-style: none;
+  #nav.active #hamburger {
+    border-top-color: transparent;
   }
-  
-  header nav ul li a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 1rem;
-    transition: all 250ms linear 0s;
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
   }
-  
-  header nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.04);
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
   }
+}
 /* Space */
 .space {
   background-color: none;
@@ -289,6 +345,15 @@ p#synopsis {
 p#book {
   font-size: 0.8rem;
 }
+
+@media (max-width: 780px) {
+  .container-details {
+    flex-direction: column;
+  }
+  #logo {
+    width: 17%;
+  }
+}
 /* Footer */
 footer {
   display: flex;
@@ -340,7 +405,7 @@ footer img {
   }
 }
 
-@media (max-width: 780px) {
+/* @media (max-width: 780px) {
   .container-details {
     flex-direction: column;
   }
@@ -372,7 +437,7 @@ footer img {
   .menu-toggle:hover {
     background: rgba(255, 255, 255, 0.15);
   }
-  /* fullscreen */
+
   .menu-section.on {
     position: absolute;
     top: 0;
@@ -419,7 +484,8 @@ footer img {
     line-height: 4rem;
     display: block;
   }
-}
+} */
+
 /* Message */
 .message {
   padding: 0.5rem;
@@ -436,6 +502,23 @@ p#text {
   color: white;
   text-shadow: 0.1rem 0.1rem #434343;
 }
+/* messageLogin */
+.messageLogin {
+  padding: 0.5rem;
+  background: linear-gradient(90deg, #232323 0%, #353535 100%);
+  z-index: 100;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+p#textLogin {
+  font-size: min(1.1rem, 3vw);
+  font-weight: 600;
+  color: white;
+  text-shadow: 0.1rem 0.1rem #434343;
+}
+
 /* Modal */
 .modal-container {
   width: 100vw;
@@ -500,8 +583,8 @@ img#img_modal {
 }
 
 .modal h2 {
-  font-size: min(1.5rem, 5vw);
   text-align: center;
+  font-size: min(1.5rem, 5vw);
   padding-bottom: 1rem;
 }
 
@@ -537,4 +620,51 @@ img#img_modal {
 
 .close:hover {
   background: rgb(238, 64, 64);
+}
+/* Tela de Login */
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxLogin form {
+  width: 15rem;
+  height: 20rem;
+  background: rgba(61, 55, 55, 0.801);
+  box-shadow: 5px 5px 5px 5px #00000035;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-shadow: 0.1rem 0.1rem rgb(31, 30, 28);
+  color: white;
+}
+
+input#user,
+input#pass {
+  padding: 0.6rem;
+  border: none;
+  outline: none;
+}
+
+a#btn {
+  display: flex;
+  padding: 0.6rem 1.5rem;
+  margin: 0 auto;
+  border: none;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  background-color: rgb(31, 30, 28);
+  color: white;
+  font-size: 1rem;
+  transition: all 250ms linear 0s;
+  text-decoration: none;
+}
+
+a#btn:hover {
+  background: rgba(117, 107, 107, 0.466);
 }
