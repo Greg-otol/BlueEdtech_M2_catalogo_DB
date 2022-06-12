@@ -87,6 +87,9 @@ a:hover {
     margin: 0 1rem;
     border-bottom: 2px solid rgba(255, 255, 255, 0.02);
   }
+  #menu a#books {
+    margin-top: 1rem;
+  }
   #btn-mobile {
     display: flex;
     align-items: center;
